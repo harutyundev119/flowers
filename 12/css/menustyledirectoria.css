@@ -1,0 +1,7 @@
+.appetiz_div:hover {
+trasform(0px , -80px): opacity:0.75;
+}
+
+. {
+    transition:transform 1200ms ease 0s; opasity: 1200ms ease 0s;
+}

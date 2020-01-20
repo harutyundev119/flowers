@@ -1,0 +1,245 @@
+
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+.reserv_div{
+    width: 100%;
+}
+.reserv_div img{
+    width: 100%;
+    position: absolute;
+}
+.end_reservation_menu{
+    position: relative;
+    z-index: 6;
+}
+
+.reserv_main{
+    width: 64%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    margin-top: 168px;
+    margin-bottom: 172px;
+    position: relative;
+    z-index: 5;
+}
+.reserv_main p:last-child{
+    margin-top: 70px;
+}
+.same1{
+    color: white;
+    font-family: Roboto;
+    letter-spacing: 0.15em;
+    font-weight: 0;
+
+
+}
+.sameh2{
+    margin-top: 60px;
+}
+.same{
+    color: #D5C07C!important;
+    font-family: Roboto;
+    letter-spacing: 0.15em;
+    padding-bottom: 20px;
+}
+
+.grey.lighten-4{
+	max-width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+	background-color: transparent!important;
+} 
+.dropdown-menu{
+	min-width: 0!important;
+	border: 0px solid rgba(0,0,0,.15)!important;
+	right: 11px!important;
+    top: 20px!important;
+	background: transparent!important;
+}
+.dropdown-toggle:after{
+	display: none;
+}
+.dropdown-item {
+	padding: 0!important;
+}
+.menu li a{
+color: 	white!important;
+opacity: .4;
+transition:  1.5s ease-in;
+}
+.menu li a:hover{
+	color: white!important;
+    opacity: 1;
+    transition:all 1.5s;
+	background: transparent!important;
+}
+a{
+    transition: all 1.5s ease-in;
+}
+#item{
+    width: 16px;
+    height: 16px;
+    color: white!important;
+	
+}
+#item:hover{
+	opacity: 1;
+    transition:  all 1.5s ease-in;
+}
+
+
+.drop_a{
+	padding-bottom: 16px!important;
+	
+}
+
+/*header*/
+
+/*footer*/
+.div6{
+	width: 100%;
+    position: relative;
+	background: black;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.footer_div{
+	width: 80%;
+	display: flex;
+	margin: auto;
+	margin-top: 66px;
+    justify-content: space-between;
+}
+.footer_end{
+    width: 86%;
+	margin: auto;
+	margin-top: 76px;
+}
+.line{
+    width: 100%;
+    border: 1px solid #656565;
+}
+.text_footer_end{
+    margin-top: 8px;
+    margin-bottom: 18px;
+    text-align: center;
+}
+.text_footer_end p{
+    font-family: Roboto;
+    font-size: 12px;
+    letter-spacing: 0.15em;
+    color: #BCBCBC;
+}
+.open_text{
+	font-family: Bellefair;
+	font-size: 20px;
+	letter-spacing: 0.15em;
+	color: #FFFFFF;
+}
+.open_div span{
+	color: white;
+}
+.open_div{
+	
+	display: flex;
+	flex-direction: column;
+}
+.hour{
+	width: 78%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.time{
+	font-family: Bellefair;
+	font-size: 18px;
+	letter-spacing: 0.15em;
+}
+.contacts_div{
+	
+	display: flex;
+	flex-direction: column;
+
+}
+.contacts_div p{
+    width: 90%;
+	font-family: Bellefair;
+	font-size: 20px;
+	letter-spacing: 0.15em;
+	color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+}
+.first{
+	width: 94%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+    
+}
+
+.second{
+    margin: auto;
+	margin-top: 25px;
+    
+}
+
+.contacts_div span{
+	font-family: Bellefair;
+	letter-spacing: 0.15em;
+	color: #B1B1B1;
+}
+
+
+.follow_div p{
+	font-family: Bellefair;
+	font-size: 20px;
+	letter-spacing: 0.15em;
+	color: #FFFFFF;
+}
+.fbinsta{
+	width: 40%;
+     display: flex;
+    justify-content: space-between;
+}
+/*footer*/
+/*medai for ferservation end page*/
+
+@media  (max-width:1200px){
+    .reserv_main {
+        margin-bottom: 126px;
+    }
+}
+@media  (max-width:1148px){
+    .reserv_main {
+        margin-bottom: 96px;
+    }
+}
+@media  (max-width:1024px){
+    .reserv_main {
+        width: 76%;
+        margin-top: 116px;
+        margin-bottom: 76px;
+        
+    }
+}
+@media  (max-width:992px){
+    .reserv_main {
+        margin-top: 106px;
+        margin-bottom: 68px;
+        
+    }
+}
+@media  (max-width:940px){
+    .reserv_main {
+        width: 94%;
+        margin-top: 30px;
+        margin-bottom: 16px;
+        
+    }
+}
+ 

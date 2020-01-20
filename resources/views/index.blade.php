@@ -105,6 +105,13 @@ function clearText(field)
 </div> <!-- END of header wrapper -->
 <div id="templatemo_main_wrapper">
 <div id="templatemo_main">
+    <div>
+        <ul>
+            @foreach($products as $product)
+                <li>{{ $product->price }}</li>
+                @endforeach
+        </ul>
+    </div>
 	<div id="sidebar" class="left">
     	<div class="sidebar_box"><span class="bottom"></span>
             <h3>Categories</h3>   
@@ -132,82 +139,25 @@ function clearText(field)
     </div>
     
     <div id="content" class="right">
-		<h2>Welcome to Floral Shop</h2>
-		<p>Floral Shop is free website template by templatemo. Sed in suscipit risus, eget consectetur justo. Praesent lacinia, nisi quis commodo consectetur, diam magna laoreet felis, a pulvinar mauris enim in felis. Phasellus in mauris velit. In pellentesque massa in nisl auctor pellentesque. Donec fermentum convallis purus, id luctus nulla tempus in. Aliquam diam nibh, consectetur quis fringilla facilisis, egestas sed odio. Validate <a href="http://validator.w3.org/check?uri=referer" rel="nofollow"><strong>XHTML</strong></a> &amp; <a href="http://jigsaw.w3.org/css-validator/check/referer" rel="nofollow"><strong>CSS</strong></a>.</p>
+		<h2>Բարի գալուստ </h2>
+	    <p>Ծաղիկների նվերների առաքում արտերկրից</p>
+              @foreach($products as $product)
+               
+        <div class="product_box">
+            <a href="productdetail.html"><img  src="data:image/png;base64,{{ chunk_split(base64_encode($product->data)) }}" height="165" width="165"> </a>
+            <h3>{{ $product->name }}</h3>
+          <p class="product_price">{{ $product->price }}</p>
+            <p class="add_to_cart">
+                <a href="productdetail.html">Detail</a>
+                <a href="shoppingcart.html">Add to Cart</a>
+            </p>
+        </div>   
+        @endforeach     	
+     
         
-        <div class="product_box">
-            <a href="productdetail.html"><img src="images/product/01.jpg" alt="floral set 1" /></a>
-      		<h3>Ut eu feugiat</h3>
-            <p class="product_price">$240</p>
-            <p class="add_to_cart">
-                <a href="productdetail.html">Detail</a>
-                <a href="shoppingcart.html">Add to Cart</a>
-            </p>
-        </div>        	
-        <div class="product_box">
-            <a href="productdetail.html"><img src="images/product/02.jpg" alt="flowers 2" /></a>
-            <h3>Donec Est Nisi</h3>
-          	<p class="product_price">$160</p>
-            <p class="add_to_cart">
-                <a href="productdetail.html">Detail</a>
-                <a href="shoppingcart.html">Add to Cart</a>
-            </p>
-        </div>        	
-        <div class="product_box">
-            <a href="productdetail.html"><img src="images/product/03.jpg" alt="floral 3" /></a>
-            <h3>Tristique Vitae</h3>
-          <p class="product_price">$140</p>
-            <p class="add_to_cart">
-                <a href="productdetail.html">Detail</a>
-                <a href="shoppingcart.html">Add to Cart</a>
-            </p>
-        </div>      	
-        <div class="product_box no_margin_right">
-            <a href="productdetail.html"><img src="images/product/04.jpg" alt="flowers 4" /></a>
-            <h3>Hendrerit Eu</h3>
-            <p class="product_price">$320</p>
-            <p class="add_to_cart">
-                <a href="productdetail.html">Detail</a>
-                <a href="shoppingcart.html">Add to Cart</a>
-            </p>
-        </div>
+     
+      	
         
-        <div class="product_box">
-            <a href="productdetail.html"><img src="images/product/05.jpg" alt="floral set 5" /></a>
-            <h3>Tincidunt Nisi</h3>
-          	<p class="product_price">$150</p>
-            <p class="add_to_cart">
-                <a href="productdetail.html">Detail</a>
-                <a href="shoppingcart.html">Add to Cart</a>
-            </p>
-        </div>        	
-        <div class="product_box">
-            <a href="productdetail.html"><img src="images/product/07.jpg" alt="flowers 7" /></a>
-            <h3>Curabitur et turpis</h3>
-            <p class="product_price">$110</p>
-            <p class="add_to_cart">
-                <a href="productdetail.html">Detail</a>
-                <a href="shoppingcart.html">Add to Cart</a>
-            </p>
-        </div>        	
-        <div class="product_box">
-            <a href="productdetail.html"><img src="images/product/06.jpg" alt="flower set 6" /></a>
-            <h3>Mauris consectetur</h3>
-            <p class="product_price">$130</p>
-            <p class="add_to_cart">
-                <a href="productdetail.html">Detail</a>
-                <a href="shoppingcart.html">Add to Cart</a>
-            </p>
-        </div>        	
-        <div class="product_box no_margin_right">
-            <a href="productdetail.html"><img src="images/product/08.jpg" alt="floral 8" /></a>
-            <h3>Proin volutpat</h3>
-            <p class="product_price">$170</p>
-            <p class="add_to_cart">
-                <a href="productdetail.html">Detail</a>
-                <a href="shoppingcart.html">Add to Cart</a>
-            </p>
-        </div>
         
         <div class="blank_box">
         	<a href="#"><img src="images/free_shipping.jpg" alt="Free Shipping" /></a>

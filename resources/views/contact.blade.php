@@ -129,24 +129,25 @@ function clearText(field)
         </div>
         <div class="cleaner h40"></div>
         <div id="contact_form">
-           <form method="post" name="contact" action="#">
+           <form method="post" action="/contact">
+               @csrf
            		<div class="col col13">
-                
-                    <label for="name">Name:</label> 
+
+                    <label for="name">Name:</label>
               		<input name="name" type="text" class="input_field" id="name" maxlength="40" />
                 	<div class="cleaner h10"></div>
-                    <label for="email">Email:</label> 
+                    <label for="email">Email:</label>
           			<input name="email" type="text" class="required input_field" id="email" maxlength="40" />
                 	<div class="cleaner h10"></div>
-                    <label for="phone">Phone:</label> 
+                    <label for="phone">Phone:</label>
         			<input name="phone" type="text" class="input_field" id="phone" maxlength="20" />
                 	<div class="cleaner h10"></div>
-                	
-                
+
+
 			 	</div>
                 
                 <div class="col col23 no_margin_right">
-                    <label for="message">Message:</label> 
+                    <label for="message">Message:</label>
                	  	<textarea id="message" name="message" rows="0" cols="0" class="required"></textarea>
                     <div class="cleaner h10"></div>
                     <input type="submit" class="submit_btn left" name="submit" id="submit" value="Send" />

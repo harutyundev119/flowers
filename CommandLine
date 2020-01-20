@@ -1,0 +1,5 @@
+make:model  - Model stexcel
+make:model -m  - model u migration stexcel
+make:migration anuny - stexcel migratia heto mejy lracnel te inch toxera unenalu tabley
+migrate:rollback - heta talis verjin arvac migratianery, aysinqn jnjuma tablnery stexcvac verjum
+migrate - anuma exac bolor migratianery,, aysinqn stexcuma tablnery

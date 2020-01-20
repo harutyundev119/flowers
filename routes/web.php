@@ -1,19 +1,11 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
 
-Route::get('/', function () {
+use Illuminate\Support\Facades\Route;
+
+Route::get('/', ['uses'=>'HomepageController@showProducts', 'as'=>'home']/*function () {
     return view('index');
-});
+}*/);
 
 Route::get('/about', function () {
     return view('about');
@@ -22,9 +14,8 @@ Route::get('/about', function () {
 Route::get('/checkout', function () {
     return view('checkout');
 });
-Route::get('/contact', function () {
-    return view('contact');
-});
+Route::get('/contact', ['uses'=>'ContactController@showContact', 'as'=>'contac']);
+Route::post('/contact', ['uses'=>'ContactController@postFeedback', 'as'=>'contact']);
 Route::get('/faqs', function () {
     return view('faqs');
 });
@@ -49,7 +40,6 @@ Route::get('/bouquets', function () {
 Route::get('/shoppingcart', function () {
     return view('shoppingcart');
 });
-Route::get('/flowersinboxes', function () {
-    return view('flowersinboxes');
-});
+Route::get('/flowersinboxes', ['uses'=>'FlowersinboxController@show1Products', 'as'=>'flowersinboxes']);
+
 

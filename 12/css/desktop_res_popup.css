@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+.reservation_div{
+    width: 100%;
+    height: -webkit-fill-available;
+    background: black;
+    position: absolute;
+    display: flex;   
+}
+#pic{
+    width: 100%;
+    object-fit: cover;
+}
+.res_popup_div{
+    width: 73%;
+    height: 828px;
+    position: relative;
+    top: 6px;
+    z-index:3;
+    background: rgba(223, 208, 157, 0.8);
+    display: flex;
+   
+    margin: auto;
+
+}
+.x{
+    width: 16px;
+    height: 16px;
+}
+.btns{
+    width: 50%;
+  
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+}
+
+    
