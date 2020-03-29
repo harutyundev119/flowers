@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use DB;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -12,8 +12,13 @@ class ContactController extends Controller
         return view('contact');
     }
     public function postFeedback(Request $request){
-//        dd($request->input('name'));
-//       print_r($name);
-        return redirect('/about');
+         $name = $request->input('name');
+         $phone = $request->input('phone');
+         $email = $request->input('email');
+         $message = $request->input('message');
+         $data=array('name'=>$name,"phone"=>$phone,"email"=>$email,"message"=>$message);
+         DB::table('contacts')->insert($data);
+        return redirect('/contact');
     }
+   
 }

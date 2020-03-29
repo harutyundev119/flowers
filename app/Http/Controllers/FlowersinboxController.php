@@ -9,9 +9,10 @@ class FlowersinboxController extends Controller
 {
     public function show1Products(Request $request) {
 
-        $products = Product::all();
+        $products = Product::where('category','=','flowersinbox')->get();
 
 
         return view('flowersinboxes', ['products'=>$products]);
     }
+   
 }

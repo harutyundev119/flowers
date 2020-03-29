@@ -51,7 +51,7 @@ function clearText(field)
 <script type="text/JavaScript" src="js/slimbox2.js"></script> 
 
 </head>
-
+@foreach($products as $product)
 <body>
 
 <div id="templatemo_wrapper_sp">
@@ -106,34 +106,34 @@ function clearText(field)
             </div>
         </div>
     </div>
-    
+  
     <div id="content" class="right">
-      	<h2>Product Detail</h2>
+      	<h2>Product Detail {{ $product->name }}</h2>
         <div class="content_half left">
         	<a  rel="lightbox" href="images/product/image_01_l.jpg"><img src="images/product/image_01.jpg" alt="yellow flowers" /></a>
         </div>
             <div class="content_half right">
                 <table>
                     <tr>
-                        <td width="130">Price:</td>
-                        <td width="84">$240</td>
+                        <td width="130" style="color: white;">Price:</td>
+                        <td width="84" style="color: white;">{{ $product->price }}</td>
                     </tr>
                     <tr>
-                        <td>Availability:</td>
-                        <td><strong>In Stock</strong></td>
+                        <td style="color: white;">Availability:</td>
+                        <td><strong style="color: white;">In Stock</strong></td>
                     </tr>
-                    <tr><td>Quantity</td><td><input type="text" value="1" size="6" maxlength="2" /></td></tr>
+                    <tr><td style="color: white;">Quantity</td><td><input type="text" value="1" size="6" maxlength="2" /></td></tr>
                 </table>
                 <div class="cleaner h20"></div>
                 <a href="shoppingcart.html" class="button">Add to Cart</a>
 			</div>
             <div class="cleaner h40"></div>
             
-            <h4>Product Description</h4>
-            <p>Sed ullamcorper nunc at magna egestas fermentum. Etiam turpis orci, condimentum luctus orci id, elementum vulputate nunc. Donec diam turpis, iaculis vitae feugiat ac, molestie at odio. Nullam tincidunt est ac sagittis ultricies. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur semper quam sit amet turpis rhoncus id venenatis tellus sollicitudin. Fusce ullamcorper, dolor non mollis pulvinar, turpis tortor commodo nisl, et semper lectus augue blandit tellus. Quisque id bibendum libero. Validate <a href="http://validator.w3.org/check?uri=referer" rel="nofollow"><strong>XHTML</strong></a> &amp; <a href="http://jigsaw.w3.org/css-validator/check/referer" rel="nofollow"><strong>CSS</strong></a>.</p>
+            <h4>Product Description / Նկարագիր /  Oписание</h4>
+            <p style="color: white;">{{ $product->description }}</p>
             <div class="cleaner h40"></div>
         <div class="blank_box">
-        	<a href="#"><img src="images/free_shipping.jpg" alt="Free Shipping" /></a>
+        	<!-- <a href="#"><img src="images/free_shipping.jpg" alt="Free Shipping" /></a> -->
         </div>    
     </div>
     <div class="cleaner"></div>
@@ -142,11 +142,12 @@ function clearText(field)
 
 <div id="templatemo_footer_wrapper">
 <div id="templatemo_footer">
-	<div class="footer_left">
+	<!-- <div class="footer_left">
     	<a href="#"><img src="images/1311260370_paypal-straight.png" alt="Paypal" /></a>
         <a href="#"><img src="images/1311260374_mastercard-straight.png" alt="Master" /></a>
         <a href="#"><img src="images/1311260374_visa-straight.png" alt="Visa" /></a>
-    </div>
+    </div> -->
+      
 	<div class="footer_right">
 		<p><a href="/">Home</a> | <a href="/products">Products</a> | <a href="/about">About</a> | <a href="/faqs">FAQs</a> | <a href="/checkout">Checkout</a> | <a href="/contact">Contact</a></p>
         <p>Yerevan 2019 <a href="/">Sakura</a></p>
@@ -155,6 +156,6 @@ function clearText(field)
 </div> <!-- END of footer -->
 </div> <!-- END of footer wrapper -->
 </div>
-
+@endforeach 
 </body>
 </html>

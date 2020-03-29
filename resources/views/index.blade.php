@@ -7,7 +7,7 @@ http://www.templatemo.com/preview/templatemo_385_floral_shop
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Floral HTML CSS Template</title>
+<title>Products - Floral Template</title>
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <link href="templatemo_style.css" rel="stylesheet" type="text/css" />
@@ -46,21 +46,18 @@ function clearText(field)
 
 </script>
 
-<link rel="stylesheet" href="css/slimbox2.css" type="text/css" media="screen" /> 
-<script type="text/JavaScript" src="js/slimbox2.js"></script> 
-
 
 </head>
 
 <body>
 
-<div id="templatemo_wrapper_h">
-<div id="templatemo_header_wh">
-	<div id="templatemo_header" class="header_home">
+<div id="templatemo_wrapper_sp">
+<div id="templatemo_header_wsp">
+	<div id="templatemo_header" class="header_subpage">
     	<div id="site_title"><a href="#">Floral Shop</a></div>
         <div id="templatemo_menu" class="ddsmoothmenu">
             <ul>
-                <li><a href="/" class="selected">Home</a></li>
+            <li><a href="/" class="selected">Home</a></li>
                 <li><a href="/about">About</a></li>
                 <li><a href="/products">Products</a></li>
                 <li><a href="/checkout">Checkout</a></li>
@@ -76,42 +73,11 @@ function clearText(field)
             </div>
             <br style="clear: left" />
         </div> <!-- end of templatemo_menu -->
-
-        <div class="slider-wrapper theme-orman">
-            <div class="ribbon"></div>
-            <div id="slider" class="nivoSlider">
-                <img src="images/portfolio/01.jpg" alt="slider image 1" />
-                <a href="#">
-                	<img src="images/portfolio/02.jpg" alt="slider image 2" title="This is an example of a caption" />
-                </a>
-                <img src="images/portfolio/03.jpg" alt="slider image 3" />
-                <img src="images/portfolio/04.jpg" alt="slider image 4" title="#htmlcaption" />
-                <img src="images/portfolio/05.jpg" alt="slider image 5" title="#htmlcaption" />
-            </div>
-            <div id="htmlcaption" class="nivo-html-caption">
-                <strong>Example</strong> caption with <a href="http://dev7studios.com" rel="nofollow">a credit link</a> for <em>this slider</em>.
-            </div>
-        </div> 
-		<script type="text/javascript" src="js/jquery-1.6.1.min.js"></script>
-        <script type="text/javascript" src="js/jquery.nivo.slider.pack.js"></script>
-        <script type="text/javascript">
-        $(window).load(function() {
-            $('#slider').nivoSlider({
-				controlNav:false
-			});
-        });
-        </script>
+        
     </div> <!-- END of header -->
 </div> <!-- END of header wrapper -->
 <div id="templatemo_main_wrapper">
 <div id="templatemo_main">
-    <div>
-        <ul>
-            @foreach($products as $product)
-                <li>{{ $product->price }}</li>
-                @endforeach
-        </ul>
-    </div>
 	<div id="sidebar" class="left">
     	<div class="sidebar_box"><span class="bottom"></span>
             <h3>Categories</h3>   
@@ -139,28 +105,26 @@ function clearText(field)
     </div>
     
     <div id="content" class="right">
-		<h2>Բարի գալուստ </h2>
-	    <p>Ծաղիկների նվերների առաքում արտերկրից</p>
-              @foreach($products as $product)
-               
-        <div class="product_box">
-            <a href="productdetail.html"><img  src="data:image/png;base64,{{ chunk_split(base64_encode($product->data)) }}" height="165" width="165"> </a>
-            <h3>{{ $product->name }}</h3>
-          <p class="product_price">{{ $product->price }}</p>
-            <p class="add_to_cart">
-                <a href="productdetail.html">Detail</a>
-                <a href="shoppingcart.html">Add to Cart</a>
-            </p>
-        </div>   
-        @endforeach     	
-     
-        
-     
-      	
-        
-        
+		<h2>Products</h2>
+        <p>Cras aliquam, mi nec imperdiet volutpat, ligula est consequat odio, eu auctor urna augue eu quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis bibendum nec nunc ac hendrerit. Morbi lacinia placerat diam sit amet fringilla. Integer accumsan suscipit suscipit. Mauris non nunc sit amet turpis pharetra mattis. Validate <a href="http://validator.w3.org/check?uri=referer" rel="nofollow"><strong>XHTML</strong></a> &amp; <a href="http://jigsaw.w3.org/css-validator/check/referer" rel="nofollow"><strong>CSS</strong></a>.</p>
+        @foreach($products as $product)
+               <div class="product_box">
+                   <a href="productdetail.html"><img  src="data:image/png;base64,{{ chunk_split(base64_encode($product->data)) }}" height="165" width="165"> </a>
+                   <h3>{{ $product->name }}</h3>
+                 <p class="product_price">{{ $product->price }}</p>
+                   <p class="add_to_cart">
+                       <a href="/{{ $product->id }}">Detail</a>
+                       <a href="shoppingcart.html">Buy</a>
+                   </p>
+               </div>   
+               @endforeach     	  
         <div class="blank_box">
-        	<a href="#"><img src="images/free_shipping.jpg" alt="Free Shipping" /></a>
+        	<!-- <a href="#" class="button left">Previous</a> 
+            <a href="#" class="button right">Next Page</a> -->
+        </div>
+        <div class="cleaner h20"></div>
+    	<div class="blank_box">
+        	<!-- <a href="#"><img src="images/free_shipping.jpg" alt="Free Shipping" /></a> -->
         </div>    
     </div>
     <div class="cleaner"></div>
@@ -170,9 +134,9 @@ function clearText(field)
 <div id="templatemo_footer_wrapper">
 <div id="templatemo_footer">
 	<div class="footer_left">
-    	<a href="#"><img src="images/1311260370_paypal-straight.png" alt="Paypal" /></a>
+    	<!-- <a href="#"><img src="images/1311260370_paypal-straight.png" alt="Paypal" /></a>
         <a href="#"><img src="images/1311260374_mastercard-straight.png" alt="Master" /></a>
-        <a href="#"><img src="images/1311260374_visa-straight.png" alt="Visa" /></a>
+        <a href="#"><img src="images/1311260374_visa-straight.png" alt="Visa" /></a> -->
     </div>
 	<div class="footer_right">
 		<p><a href="/">Home</a> | <a href="/products">Products</a> | <a href="/about">About</a> | <a href="/faqs">FAQs</a> | <a href="/checkout">Checkout</a> | <a href="/contact">Contact</a></p>

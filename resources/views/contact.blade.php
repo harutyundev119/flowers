@@ -129,7 +129,7 @@ function clearText(field)
         </div>
         <div class="cleaner h40"></div>
         <div id="contact_form">
-           <form method="post" action="/contact">
+           <form method="post" action="/contact/insert">
                @csrf
            		<div class="col col13">
 
@@ -169,11 +169,11 @@ function clearText(field)
 
 <div id="templatemo_footer_wrapper">
 <div id="templatemo_footer">
-	<div class="footer_left">
+	<!-- <div class="footer_left">
     	<a href="#"><img src="images/1311260370_paypal-straight.png" alt="Paypal" /></a>
         <a href="#"><img src="images/1311260374_mastercard-straight.png" alt="Master" /></a>
         <a href="#"><img src="images/1311260374_visa-straight.png" alt="Visa" /></a>
-    </div>
+    </div> -->
 <div class="footer_right">
 		<p><a href="/">Home</a> | <a href="/products">Products</a> | <a href="/about">About</a> | <a href="/faqs">FAQs</a> | <a href="/checkout">Checkout</a> | <a href="/contact">Contact</a></p>
         <p>Yerevan 2019 <a href="/">Sakura</a></p>
